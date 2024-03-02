@@ -1,0 +1,74 @@
+/************************************ TAG SELECTORS ******************************/
+/************************************ CLASS TAGS *********************************/
+.container{
+height: 100vh;
+width: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    background: linear-gradient(#ffffff,#392467);
+    transform: translate(-490px, -150px);
+}
+.container::after{
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#fcd200, #fc002e);
+    transform: translate(490px, 170px);
+}
+.container .ball-1{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #04f504;
+    transform: translate(-250px, 200px);
+    position: absolute;
+}
+.container .ball-2{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #08e2ff;
+    transform: translate(-10px, -220px);
+    position: absolute;
+}
+.container .ball-3{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #ffc404;
+    transform: translate(150px, 250px);
+    position: absolute;
+}
+
+.container .box {
+    height: 86vh;
+    width: 100%;
+    padding: 0.20px;
+    background: rgb(255, 255, 255, 0.1);
+    z-index: 10;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgb(10, 10, 10, 0.25);
+}
+.man-eng{
+    width: 600px;
+    height: auto;
+    border-radius: 12px;
+    transform: translate(-38px);
+}
+
+/************************************ ID TAGS **********************************/
