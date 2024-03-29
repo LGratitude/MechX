@@ -1,15 +1,33 @@
  /******************************************************** Tag Selectors ********************************************************/
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ } 
+
  /******************************************************** Class Tags ********************************************************/
+ .bg-color{
+  background-color: #DDDDDD
+ }
+
  .carousel .carousel-item {
-    height: 450px;
-  }
-  
-  .carousel-item img {
-      position: absolute;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      min-height: 500px;
-  }
+   height: 450px;
+ }
+
+ .carousel-item img {
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   min-height: 500px;
+ }
+
+ 
+ .img-corner{
+  border-radius: 10%;
+ }
+.services-img{
+  border-radius: 100%;
+}
 
  /******************************************************** ID Tags ********************************************************/
