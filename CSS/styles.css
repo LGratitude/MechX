@@ -26,6 +26,13 @@
  .img-corner{
   border-radius: 10%;
  }
+
+ .featurette-divider{
+  border: dashed red;
+  margin: 52px;
+
+ }
+
 .services-img{
   border-radius: 100%;
 }
