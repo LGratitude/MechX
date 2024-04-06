@@ -1,13 +1,14 @@
  /******************************************************** Tag Selectors ********************************************************/
- *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- } 
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 
  /******************************************************** Class Tags ********************************************************/
- .bg-color{
-  background-color: #DDDDDD
+ .bg-color {
+   /* background-color: #dc3545; */
+   background-color: #ED1C24;
  }
 
  .carousel .carousel-item {
@@ -22,19 +23,76 @@
    min-height: 500px;
  }
 
- 
- .img-corner{
-  border-radius: 10%;
+
+ .img-corner {
+   border-radius: 10%;
  }
 
- .featurette-divider{
-  border: dashed red;
-  margin: 52px;
+ .featurette-divider {
+   border: dashed red;
+   margin: 52px;
 
  }
 
-.services-img{
-  border-radius: 100%;
-}
+ /* Navbar toggler-icon */
+ .navbar-toggler {
+   border: 0;
+ }
+
+ .navbar-toggler:focus,
+ .navbar-toggler:active,
+ .navbar-toggler:focus {
+   outline: none;
+   box-shadow: none;
+   border: 0;
+ }
+
+ .toggler-icon {
+   width: 30px;
+   height: 3px;
+   background-color: white;
+   display: block;
+   transition: all 0.2s;
+ }
+
+ .middle-bar {
+   margin: 5px auto;
+ }
+
+ .navbar-toggler .top-bar {
+   transform: rotate(45deg);
+   transform-origin: 10% 10%;
+ }
+
+ .navbar-toggler .middle-bar {
+   opacity: 0;
+   filter: alpha(opacity=0);
+ }
+
+ .navbar-toggler .bottom-bar {
+   transform: rotate(-45deg);
+   transform-origin: 15% 10%;
+ }
+
+ .navbar-toggler.collapsed .top-bar {
+   transform: rotate(0);
+ }
+
+ .navbar-toggler.collapsed .middle-bar {
+   opacity: 1;
+   filter: alpha(opacity=100);
+ }
+
+ .navbar-toggler.collapsed .bottom-bar {
+   transform: rotate(0);
+ }
+
+ .services-img {
+   border-radius: 100%;
+ }
+ .services{
+  /* background: radial-gradient(circle, rgba(36,10,52,1) 0%, rgba(252,70,107,1) 85%); */
+  background: radial-gradient(circle, rgba(36,10,52,1) 0%, rgba(237,28,36,1) 85%);
+ }
 
  /******************************************************** ID Tags ********************************************************/
