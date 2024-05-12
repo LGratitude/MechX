@@ -20,10 +20,9 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/Mechx Industry logo.svg" height="100px"
-                    alt="MechX"></a>
+            <a class="navbar-brand img-fluid" href="index.html"><img src="images/MechX-Indus_NoBg.svg" alt="MechX"></a>
             <button class="navbar-toggler collapsed shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -40,7 +39,7 @@
                         <a class="nav-link text-white" href="aboutUs.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-disabled="true" href="service.html">Services</a>
+                        <a class="nav-link text-white" href="service.html">Services</a>
                     </li>
                 </ul>
 
@@ -73,32 +72,85 @@
     </nav>
 
     <!-- Hero section -->
-    <div class="container px-4 ">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-lg-6 welding-man img-fluid mx-auto img-corner ">
-                <img src="images/welding.jpg" class="img-corner d-block mx-lg-auto img-fluid" alt="Welding man"
-                    width="100%" loading="lazy">
+    <section class="hero-section  d-flex align-items-center justify-content-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="container px-4 hero-text text-white">
+            <h1 class="display-5 fw-bold lh-1 mb-3">An Engineered Real-world</h1>
+            <p class="lead">At <span class="fw-semibold fs-6">MechX Industries</span>, our vision is to
+                apply sustainable engineering principles to solve real- world problems, <br> particularly in the
+                African
+                context, by addressing important challenges faced by our society.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-5">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger btn-lg px-4 me-md-2 " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Get Free Quote</button>
+                <a class="btn btn-outline-light btn-lg px-4" type="button" href="#contact-Us">Contact Us</a>
             </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Setting the Standard for Engineering
-                    Excellence</h1>
-                <p class="lead">At <span class="fw-semibold fs-6">MechX</span>, we're driven by innovation, powered by expertise, and committed to excellence.
-                     Let us bring your vision to life with cutting-edge solutions tailored to your needs.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-danger btn-lg px-4 me-md-2">Get Free Quote</button>
-                    <a class="btn btn-outline-secondary btn-lg px-4" type="button" href="#contact-Us">Contact Us</a>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">Request a quick quote</h1>
+                        <button type="button" class="btn-close d-flex  justify-content-end" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-end">
+                        <p class="text-center">If you'd like to receive a quick quote from a sales representative,
+                            please complete the form
+                            below.</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Enter your name</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Cell No/Work phone</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Cell no or work phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">company</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Company">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select category</option>
+                                <option value="1">Machire Hire</option>
+                                <option value="2">Engineering Consultation</option>
+                                <option value="3">Construction Project Management</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mx-auto" type="submit"
+                            data-bs-dismiss="modal">REQUEST
+                            QUOTE</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Why Us -->
     <section class="WhyUs">
         <div class="container">
             <h3 class="text-center pt-3">Why Us</h3>
             <hr class="featurette-divider  mx-auto ">
-            <p class="px-5 text-center">At <span class="fw-semibold fs-6">MechX?</span>, we stand out for our unparalleled expertise, unwavering commitment to innovation, 
-                and relentless dedication to customer satisfaction. Experience the difference with us and let us bring your projects to new heights</p>
+            <p class="px-5 text-center">At <span class="fw-semibold fs-6">MechX?</span>, At MechX Industries we provide
+                our clients with specialized technical engineering expertise, advanced project management tools and
+                essential physical resources needed to meet their project objectives.</p>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                 <div class="col">
@@ -112,9 +164,11 @@
                                         class="rounded-circle border border-white">
                                 </li>
                                 <li class="d-flex align-items-center mx-auto">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-geo-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411" />
+                                    </svg>
                                     <small>Gauteng</small>
                                 </li>
                             </ul>
@@ -133,9 +187,11 @@
                                         class="rounded-circle border border-white">
                                 </li>
                                 <li class="d-flex align-items-center mx-auto">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-geo-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411" />
+                                    </svg>
                                     <small>Limpopo</small>
                                 </li>
                             </ul>
@@ -154,10 +210,12 @@
                                         class="rounded-circle border border-white ms-start">
                                 </li>
                                 <li class="d-flex align-items-center mx-auto">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
-                                      </svg>
-                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-geo-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411" />
+                                    </svg>
+
                                     <small>Mpumalanga</small>
                                 </li>
                             </ul>
@@ -175,25 +233,28 @@
         <!-- Three columns of text below the carousel -->
         <div class="container ">
             <div class="row text-center text-white pb-5 mb-5" data-bs-theme="dark">
-                <h3 class="text-center pt-3">Services</h3>               
+                <h3 class="text-center pt-3">Services</h3>
                 <div class="col-lg-4 py-5">
                     <img src="images/bobcat.jpg" class="services-img mx-auto" width="140" height="140" alt="bobcat">
                     <h2 class="fw-normal pt-3">Machine Hire</h2>
-                    <p>Access our extensive fleet of state-of-the-art machinery for your construction and engineering projects.</p>
+                    <p>Access our extensive fleet of state-of-the-art machinery for your construction and engineering
+                        projects.</p>
                     <p><a class="btn btn-light" href="service.html">View details »</a></p>
                 </div>
                 <div class="col-lg-4 py-5">
                     <img src="images/construction.jpg" class="services-img mx-auto" width="140" height="140"
                         alt="bobcat">
                     <h2 class="fw-normal pt-3">Construction Project Management</h2>
-                    <p>Let our experienced team manage your projects from start to finish, ensuring efficiency and success.</p>
+                    <p>Let our experienced team manage your projects from start to finish, ensuring efficiency and
+                        success.</p>
                     <p><a class="btn btn-light" href="service.html">View details »</a></p>
                 </div>
                 <div class="col-lg-4 py-5">
                     <img src="images/consultation.jpg" class="services-img mx-auto" width="140" height="140"
                         alt="bobcat">
                     <h2 class="fw-normal pt-3">Engineering Consultation</h2>
-                    <p>Benefit from our expertise and insights to overcome challenges and optimize your engineering solutions.</p>
+                    <p>Benefit from our expertise and insights to overcome challenges and optimize your engineering
+                        solutions.</p>
                     <p><a class="btn btn-light" href="service.html">View details »</a></p>
                 </div>
             </div>
@@ -205,12 +266,21 @@
         <div class="container py-3">
             <h3 class="text-center">Contact Us</h3>
             <hr class="featurette-divider mx-auto">
-            <p class="px-5 text-center">Ready to experience the difference with <span class="fw-semibold fs-6">MechX?</span> 
+            <p class="px-5 text-center">Ready to experience the difference with <span
+                    class="fw-semibold fs-6">MechX?</span>
                 Get in touch today to discuss your project requirements and discover how we can help you succeed.</p>
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3  d-flex gap-4 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label px-2" for="exampleCheck1">Machine Hire</label>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label px-2" for="exampleCheck1">Engineering Consultation</label>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label px-2" for="exampleCheck1">Construction Project Management</label>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
