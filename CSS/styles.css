@@ -37,7 +37,6 @@
    height: 62%;
   background-color: rgb(0, 0, 0, 0.5);
  }
-
  .hero-text {
    z-index: 1;
  }
@@ -54,6 +53,23 @@
  .CPM-bg {
    background: linear-gradient(90deg, rgba(237, 28, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
  }
+
+ /* **** Modal Quotes**** */
+ .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .submitBtn {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+ }
+
+ .form-control.invalid {
+  border-color: red;
+}
 
  /*Navbar & Navbar toggler-icon */
  .navbar {

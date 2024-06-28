@@ -7,8 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous"> -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (if not included automatically) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/styles.css">
@@ -87,61 +93,104 @@
                 <a class="btn btn-outline-light btn-lg px-4" type="button" href="#contact-Us">Contact Us</a>
             </div>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">Request a quick quote</h1>
-                        <button type="button" class="btn-close d-flex  justify-content-end" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold fs-5" id="exampleModalLabel">Request a quick quote</h5>
+                    <div class="">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close">
+
+                        </button>
                     </div>
-                    <div class="modal-body text-end">
+                </div>
+                <div class="modal-body">
+                    <form id="quoteForm">
                         <p class="text-center">If you'd like to receive a quick quote from a sales representative,
                             please complete the form
                             below.</p>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Enter your name</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Enter your name">
+                        <div class="mb-3 form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
+                        <div class="mb-3 form-group">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="text" class="form-control" id="email" name="email"
+                                placeholder="name@example.com" oninput="validateEmail(this.value)">
+                            <p id="emailValidationResult"></p>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Cell No/Work phone</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Cell no or work phone">
+                        <div class="mb-3 form-group">
+                            <label for="cell" class="form-label">Cell No/Work phone</label>
+                            <input type="text" class="form-control" id="phoneNumber" name="cell"
+                                placeholder="Cell no or work phone" oninput="validatePhoneNumber(this.value)">
+                            <p id="validationResult"></p>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">company</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Company">
+                        <div class="mb-3 form-group">
+                            <label for="company" class="form-label">company</label>
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company">
                         </div>
-                        <div class="mb-3">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Select category</option>
-                                <option value="1">Machire Hire</option>
-                                <option value="2">Engineering Consultation</option>
-                                <option value="3">Construction Project Management</option>
+                        <div class="mb-3 form-group">
+                            <label for="category">Category</label>
+                            <select class="form-select" id="category" name="category">
+                                <option value="">Select category</option>
+                                <option value="machineHire">Machire Hire</option>
+                                <option value="engineeringConsultation">Engineering Consultation</option>
+                                <option value="constructionProjectManagement">Construction Project Management</option>
                             </select>
+                            <p id="validationMessage"></p>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <div class="mb-3 form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="Message" rows="3"></textarea>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger mx-auto" type="submit"
-                            data-bs-dismiss="modal">REQUEST
+                        <button class="btn btn-danger submitBtn mx-auto" type="submit" id="requestQuoteBtn">REQUEST
                             QUOTE</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold fs-5" id="exampleModalLabel">Request a quick quote</h5>
+                    <div class="">
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close">
+
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form id="quoteForm">
+                        <p class="text-center">If you'd like to receive a quick quote from a sales representative,
+                            please complete the form
+                            below.</p>
+                        <div class="mb-3 form-group">
+                            <label for="category">Category</label>
+                            <select class="form-select" id="category" name="category">
+                                <option value="">Select category</option>
+                                <option value="machineHire">Machire Hire</option>
+                                <option value="engineeringConsultation">Engineering Consultation</option>
+                                <option value="constructionProjectManagement">Construction Project Management</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-danger submitBtn mx-auto" type="submit" id="requestQuoteBtn">REQUEST
+                            QUOTE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
 
     <!-- Why Us -->
     <section class="WhyUs">
@@ -332,6 +381,13 @@
         crossorigin="anonymous"></script>
     <!-- Javascript -->
     <script src="JS/scripts.js"></script>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
