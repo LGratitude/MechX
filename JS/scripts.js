@@ -104,65 +104,26 @@ function validateEmail(email) {
   //Clear all modal fields when you click the close button or click outside the modal
   document.addEventListener('DOMContentLoaded', function() {
     const quoteForm = document.getElementById('quoteForm');
-    const modalCloseButton = document.querySelector('#quoteModal .btn-close');
-    const modalBackdrop = document.querySelector('.modal-backdrop');
-
-    // Function to clear form fields
+    const modalBackdropSelector = '.modal-backdrop';
+  
+    // Event delegation approach
+    document.addEventListener('click', function(event) {
+      if (event.target.matches(modalBackdropSelector)) {
+        clearFormFields();
+      }
+    });
+  
     function clearFormFields() {
       quoteForm.reset();
     }
-
-    // Reset form fields when modal is closed
-    modalCloseButton.addEventListener('click', clearFormFields);
-    modalBackdrop.addEventListener('click', clearFormFields);
-
-    // Optional: Reset form fields when modal is hidden (via Bootstrap event)
+  
+    // Optional: Clear form fields when modal is hidden
     const quoteModal = new bootstrap.Modal(document.getElementById('quoteModal'));
     quoteModal._element.addEventListener('hidden.bs.modal', clearFormFields);
   });
 
-  
+
 //*************Function for request quote button ********************/
-document.addEventListener('DOMContentLoaded', function() {
-    const quoteForm = document.getElementById('quoteForm');
 
-    quoteForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Validate form fields
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const cellNumber = document.getElementById('phoneNumber').value.trim();
-      const category = document.getElementById('category').value.trim();
-
-      if (name === '' || email === '' || cellNumber === '' || category === '') {
-        alert('Please fill in all required fields: Name, Email, Cell Number, and Category.');
-        return;
-      }
-
-      // Simulate sending data to your personal email (replace with actual server-side script)
-      // This is just a simulation, in a real scenario, you'd send this data to a server-side script
-      const formData = new FormData(quoteForm);
-      fetch('https://example.com/submit_quote', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Quote request submitted successfully!');
-          quoteForm.reset(); // Reset the form after successful submission
-          const modal = new bootstrap.Modal(document.getElementById('quoteModal'));
-          modal.hide(); // Hide the modal after submission
-        } else {
-          throw new Error('Failed to submit quote request.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred while submitting the quote request.');
-      });
-    });
-  });
-  
   
   

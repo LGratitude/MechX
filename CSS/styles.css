@@ -145,8 +145,17 @@
  }
 
  #aboutUs {
-   background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.04945728291316531) 0%, rgba(2, 0, 36, 0.3603816526610645) 35%, rgba(2, 0, 36, 0.16150210084033612) 100%), url("../images/spark.jpg");
+   background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.04945728291316531) 0%, rgba(2, 0, 36, 0.3603816526610645) 35%, rgba(2, 0, 36, 0.16150210084033612) 100%), url("../images/egg.jpg");
    min-height: 40vh;
+ }
+ #aboutUs .container{
+ 
+  justify-content: center; /* Center contents horizontally */
+  align-items: center;
+ }
+
+ .aboutUsHero{
+  text-align: center;
  }
 
  #service-hero {
