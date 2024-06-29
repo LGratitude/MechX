@@ -89,7 +89,7 @@
             <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-5">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-danger btn-lg px-4 me-md-2 " data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">Get Free Quote</button>
+                    data-bs-target="#quoteModal">Get Free Quote</button>
                 <a class="btn btn-outline-light btn-lg px-4" type="button" href="#contact-Us">Contact Us</a>
             </div>
         </div>
@@ -97,12 +97,12 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold fs-5" id="exampleModalLabel">Request a quick quote</h5>
+                    <h5 class="modal-title fw-bold fs-5" id="quoteModalLabel">Request a quick quote</h5>
                     <div class="">
                         <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close">
 
@@ -115,17 +115,17 @@
                             please complete the form
                             below.</p>
                         <div class="mb-3 form-group">
-                            <label for="name">Name:</label>
+                            <label for="name">Name:<span class="text-danger">*</span</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                         </div>
                         <div class="mb-3 form-group">
-                            <label for="email" class="form-label">Email:</label>
+                            <label for="email" class="form-label">Email:<span class="text-danger">*</span</label>
                             <input type="text" class="form-control" id="email" name="email"
                                 placeholder="name@example.com" oninput="validateEmail(this.value)">
                             <p id="emailValidationResult"></p>
                         </div>
                         <div class="mb-3 form-group">
-                            <label for="cell" class="form-label">Cell No/Work phone</label>
+                            <label for="cell" class="form-label">Phone Number:<span class="text-danger">*</span</label>
                             <input type="text" class="form-control" id="phoneNumber" name="cell"
                                 placeholder="Cell no or work phone" oninput="validatePhoneNumber(this.value)">
                             <p id="validationResult"></p>
@@ -135,14 +135,14 @@
                             <input type="text" class="form-control" id="company" name="company" placeholder="Company">
                         </div>
                         <div class="mb-3 form-group">
-                            <label for="category">Category</label>
+                            <label for="category">Category:<span class="text-danger">*</span</label>
                             <select class="form-select" id="category" name="category">
                                 <option value="">Select category</option>
                                 <option value="machineHire">Machire Hire</option>
                                 <option value="engineeringConsultation">Engineering Consultation</option>
                                 <option value="constructionProjectManagement">Construction Project Management</option>
                             </select>
-                            <p id="validationMessage"></p>
+                            <p id="validationMessage"></p> <p id="validationMessage" class="validation-message"></p>
                         </div>
                         <div class="mb-3 form-group">
                             <label for="message" class="form-label">Message</label>
