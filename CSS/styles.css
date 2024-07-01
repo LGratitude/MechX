@@ -5,6 +5,13 @@
    box-sizing: border-box;
  }
 
+ h1 {
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: bold;
+   font-style: normal;
+ }
+
  /******************************************************** Class Tags ********************************************************/
  .card-cover {
    background-repeat: no-repeat;
@@ -30,13 +37,15 @@
    height: 100%;
    background-color: rgb(0, 0, 0, 0.5);
  }
- .service-overlay{
-  position: absolute;
-  left: 0;
-  width: 100%;
+
+ .service-overlay {
+   position: absolute;
+   left: 0;
+   width: 100%;
    height: 62%;
-  background-color: rgb(0, 0, 0, 0.5);
+   background-color: rgb(0, 0, 0, 0.5);
  }
+
  .hero-text {
    z-index: 1;
  }
@@ -50,26 +59,32 @@
    border: dashed red;
  }
 
+ /* Engineering Consultation */
+ .divider {
+   border: dashed #ffff;
+   /* Change the color here */
+ }
+
  .CPM-bg {
    background: linear-gradient(90deg, rgba(237, 28, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
  }
 
  /* **** Modal Quotes**** */
  .modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
  }
 
  .submitBtn {
-  display: flex;
-  justify-content: center;
-  /*align-items: center;*/
+   display: flex;
+   justify-content: center;
+   /*align-items: center;*/
  }
 
  .form-control.invalid {
-  border-color: red;
-}
+   border-color: red;
+ }
 
  /*Navbar & Navbar toggler-icon */
  .navbar {
@@ -145,17 +160,19 @@
  }
 
  #aboutUs {
-   background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.04945728291316531) 0%, rgba(2, 0, 36, 0.3603816526610645) 35%, rgba(2, 0, 36, 0.16150210084033612) 100%), url("../images/egg.jpg");
+   background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.04945728291316531) 0%, rgba(2, 0, 36, 0.3603816526610645) 35%, rgba(2, 0, 36, 0.16150210084033612) 100%), url("../images/fountain.jpg");
    min-height: 40vh;
  }
- #aboutUs .container{
- 
-  justify-content: center; /* Center contents horizontally */
-  align-items: center;
+
+ #aboutUs .container {
+
+   justify-content: center;
+   /* Center contents horizontally */
+   align-items: center;
  }
 
- .aboutUsHero{
-  text-align: center;
+ .aboutUsHero {
+   text-align: center;
  }
 
  #service-hero {
